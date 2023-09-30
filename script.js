@@ -12,5 +12,5 @@ var swiper = new Swiper(".mySwiper",
         modifier:1,
         slideShodows:true
     },
-    loop:true,
+
 });

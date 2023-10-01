@@ -1,4 +1,4 @@
-@import url(https://db.onlinewebfonts.com/c/3ad0aac697589e9dc6f60d8d55f27e0c?family=Alleyn+W01+Semibold);
+
 * {
     padding: 0;
     margin: 0;
@@ -17,36 +17,6 @@ body{
     margin: 0 auto;
 }
 
-.search{
-    padding: 50px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.search i{
-    font-size: 25px;
-    color: #ffffff
-}
-
-.search-txt{
-    display: flex;
-    align-items: center;
-}
-
-.search-txt i{
-    font-size: 40px;
-    color:#F8010A;
-  
-}
-
-.search-txt h2
-{
-    color: #ffffff;
-    font-size: 30px;
-    margin-left: 10px;
-    font-family: "Alleyn W01 Semibold";
-}
 
 .movies
 {
@@ -79,31 +49,6 @@ body{
 
 }
 
-.icons 
-{
-    padding: 0 350px 50px 350px;
-    display: flex;
-    justify-content: space-between;
-}
-.icons i
-{
-    font-size: 25px;
-    color:#ffffff;
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-} 
-
-.icons i:hover
-{
-    color: aqua;
-    background-color: black;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2 );
-    cursor: pointer;
-}
 
 .titulo {
     display: flex;
@@ -114,7 +59,7 @@ body{
   }
 .subtitulo {
     display: flex;
-    padding-left: 494px;
+    padding-left: 502px;
     align-items: center; /* Alinea verticalmente al centro */
     gap: 0px;
     padding-bottom: 30px;
@@ -155,6 +100,53 @@ body{
     font-weight: 100;
   }
 
+.icons-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding-top:15px;
+}
+.icons-button-50anos {
+    width: 60px; /* Define el ancho y alto del botón circular */
+    height: 60px;
+    border-radius: 50%; /* Hace que el botón tenga forma circular */
+    background-image: url('/Iconos/50Anos.png'); /* URL de la imagen de fondo */
+    background-size: 105% 80%; 
+    background-position: center; /* Centra la imagen en el botón */
+    border: none; /* Elimina el borde del botón */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    margin: 0 30px; /* Agrega espacio horizontal entre los botones */
+
+    /* Agrega otros estilos según sea necesario */
+}
+.icons-button-uao {
+    width: 60px; /* Define el ancho y alto del botón circular */
+    height: 60px;
+    border-radius: 50%; /* Hace que el botón tenga forma circular */
+    background-image: url('/Iconos/UAO.png'); /* URL de la imagen de fondo */
+    background-size: 110% 100%; 
+    background-position: center; /* Centra la imagen en el botón */
+    border: none; /* Elimina el borde del botón */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    margin: 0 30px; /* Agrega espacio horizontal entre los botones */
+
+    /* Agrega otros estilos según sea necesario */
+}
+.icons-button-acreditacion {
+    width: 60px; /* Define el ancho y alto del botón circular */
+    height: 60px;
+    border-radius: 50%; /* Hace que el botón tenga forma circular */
+    background-image: url('/Iconos/Acreditacion.png'); /* URL de la imagen de fondo */
+    background-size: 98% 98%; 
+    background-position: center; /* Centra la imagen en el botón */
+    border: none; /* Elimina el borde del botón */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    margin: 0 30px; /* Agrega espacio horizontal entre los botones */
+ 
+    /* Agrega otros estilos según sea necesario */
+}
+
+
 @media(max-width: 991px)
 {
     body
@@ -174,6 +166,7 @@ body{
     {
         padding: 30px
     }
+   
 }
 
 

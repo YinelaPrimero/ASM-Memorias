@@ -1,3 +1,4 @@
+@import url(https://db.onlinewebfonts.com/c/3ad0aac697589e9dc6f60d8d55f27e0c?family=Alleyn+W01+Semibold);
 * {
     padding: 0;
     margin: 0;
@@ -7,7 +8,7 @@
 
 body{
     height: 100vh;
-    background-color: black;
+    background-color: #211F20;
 
 }
 
@@ -44,6 +45,7 @@ body{
     color: #ffffff;
     font-size: 30px;
     margin-left: 10px;
+    font-family: "Alleyn W01 Semibold";
 }
 
 .movies
@@ -102,6 +104,56 @@ body{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2 );
     cursor: pointer;
 }
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinea verticalmente al centro */
+    gap: 20px;
+    padding-top: 20px;
+  }
+.subtitulo {
+    display: flex;
+    padding-left: 494px;
+    align-items: center; /* Alinea verticalmente al centro */
+    gap: 0px;
+    padding-bottom: 30px;
+  }
+  
+  h2 {
+    margin: 0;
+    color:#ffffff;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 700;
+  }
+
+  h3 {
+    margin: 0;
+    color:#ffffff;
+    letter-spacing: 6px; /* Aumenta el espacio entre las letras */
+    font-size: 22.5px;
+  }
+  
+  .MMIAS {
+    font-size: 80px; /* Tamaño diferente para MMIAS */
+    filter: blur(2px); /* Desenfocar el texto MMIAS */
+  }
+  
+  .EOR {
+    font-size: 100px; /* Tamaño diferente para EOR */
+    filter: blur(0px); /* Mantener el texto EOR enfocado (sin desenfoque) */
+  }
+
+   
+  .historias {
+    font-family: 'Montserrat-Regular', sans-serif;
+    font-weight: 600;
+  }
+  
+  .entre {
+    font-family: 'Montserrat-ExtraLight', sans-serif;
+    font-weight: 100;
+  }
 
 @media(max-width: 991px)
 {

@@ -11,7 +11,7 @@ body {
 }
 
 .conainter {
-    max-width: 1200px;
+    max-width: 90%;
     margin: 0 auto;
 }
 
@@ -173,12 +173,39 @@ h3 {
     /* Agrega otros estilos según sea necesario */
 }
 
-
 @media(max-width: 991px) {
     body {
         min-height: 0vh;
     }
+}
 
+/* For screens smaller than 576px */
+@media (max-width: 576px) {
+    /* Example: Adjust button size or spacing for very small screens */
+    .icons-button-50anos,
+    .icons-button-uao,
+    .icons-button-acreditacion {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/* Estilos para el contenedor del "pegman" */
+.pegman-container {
+    position: absolute;
+    top: 50%; /* Alinea el "Pegman" verticalmente en la mitad de la página */
+    left: 30%; /* Ajusta la distancia desde la parte izquierda según tus necesidades */
+    transform: translate(-50%, -50%);/* Centra verticalmente el "Pegman" */
+    z-index: 2;
+}
+ 
+
+/* Estilos para la imagen del "pegman" */
+.pegman-image {
+    width: 120px; /* Ajusta el tamaño del "pegman" según tus necesidades */
+    height: auto;
+}
     .search {
         padding: 30px 30px 0 30px;
     }

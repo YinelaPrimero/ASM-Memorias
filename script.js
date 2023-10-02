@@ -2,6 +2,11 @@ const body = document.body;
 const swiperContainer = document.querySelector('.swiper-container');
 const pegman = document.getElementById('pegman');
 
+const modals = document.querySelectorAll(".modal");
+const closeModalBtns = document.querySelectorAll(".close-modal");
+const images = document.querySelectorAll(".swiper-slide img");
+
+
 // Define Swiper configuration
 const swiperConfig = {
   effect: 'coverflow',
@@ -64,40 +69,9 @@ document.addEventListener('mousemove', (e) => {
       pegman.getBoundingClientRect().right <= slideBounds.right
     ) {
       swiper.slideTo(index);
-
-const modals = document.querySelectorAll(".modal");
-const closeModalBtns = document.querySelectorAll(".close-modal");
-const images = document.querySelectorAll(".swiper-slide img");
-
-// Función para mostrar una ventana emergente por año
-function showModal(year) {
-  const modalId = `modal${year}`;
-  const modal = document.getElementById(modalId);
-  if (modal) {
-    modal.style.display = "block";
-  }
-}
-
-// Evento para abrir la ventana emergente cuando se hace clic en la imagen
-images.forEach((image, index) => {
-  image.addEventListener("click", () => {
-    const years = [1970, 1980, 1990, 2000, 2010];
-    showModal(years[index]);
-  });
-});
-
-// Evento para cerrar la ventana emergente al hacer clic en el botón de cierre
-closeModalBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const modalId = btn.getAttribute("data-modal");
-    const modal = document.getElementById(modalId);
-    if (modal) {
-      modal.style.display = "none";
-
     }
   });
 });
-
 
 document.addEventListener('mouseup', () => {
   if (!isDragging) return;
@@ -138,6 +112,40 @@ updateSwiperConfig();
 // Listen for window resize events to update Swiper config
 window.addEventListener('resize', updateSwiperConfig);
 
+
+
+
+
+
+
+// Función para mostrar una ventana emergente por año
+function showModal(year) {
+  const modalId = `modal${year}`;
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.style.display = "block";
+  }
+}
+
+// Evento para abrir la ventana emergente cuando se hace clic en la imagen
+images.forEach((image, index) => {
+  image.addEventListener("click", () => {
+    const years = [1970, 1980, 1990, 2000, 2010];
+    showModal(years[index]);
+  });
+});
+
+// Evento para cerrar la ventana emergente al hacer clic en el botón de cierre
+closeModalBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const modalId = btn.getAttribute("data-modal");
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+
 // Evento para cerrar la ventana emergente al hacer clic fuera de ella
 window.addEventListener("click", (event) => {
   modals.forEach((modal) => {
@@ -146,4 +154,3 @@ window.addEventListener("click", (event) => {
     }
   });
 });
-

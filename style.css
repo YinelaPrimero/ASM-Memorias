@@ -173,11 +173,9 @@ h3 {
     /* Agrega otros estilos según sea necesario */
 }
 
-/* For screens smaller than 768px */
-@media (max-width: 768px) {
-    /* Example: Adjust font size or padding for smaller screens */
-    h2 {
-        font-size: 20px;
+@media(max-width: 991px) {
+    body {
+        min-height: 0vh;
     }
 }
 
@@ -208,3 +206,48 @@ h3 {
     width: 120px; /* Ajusta el tamaño del "pegman" según tus necesidades */
     height: auto;
 }
+    .search {
+        padding: 30px 30px 0 30px;
+    }
+
+    .movies {
+        padding: 30px;
+    }
+
+    .icons {
+        padding: 30px
+    }
+
+}
+
+/* Estilos para la ventana emergente */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    overflow: auto;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  

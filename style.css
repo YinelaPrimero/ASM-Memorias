@@ -8,6 +8,8 @@
 body {
     height: 100vh;
     background: radial-gradient(circle, #ffffff36, #000000ad);
+    background-color: #2a0606;
+    /*"#001938", "#331d0f", "#0f2404", "#35111d", "#3d1403"*/
 }
 
 .conainter {
@@ -181,6 +183,7 @@ h3 {
 
 /* For screens smaller than 576px */
 @media (max-width: 576px) {
+
     /* Example: Adjust button size or spacing for very small screens */
     .icons-button-50anos,
     .icons-button-uao,
@@ -194,31 +197,36 @@ h3 {
 /* Estilos para el contenedor del "pegman" */
 .pegman-container {
     position: absolute;
-    top: 50%; /* Alinea el "Pegman" verticalmente en la mitad de la página */
-    left: 30%; /* Ajusta la distancia desde la parte izquierda según tus necesidades */
-    transform: translate(-50%, -50%);/* Centra verticalmente el "Pegman" */
+    top: 50%;
+    /* Alinea el "Pegman" verticalmente en la mitad de la página */
+    left: 30%;
+    /* Ajusta la distancia desde la parte izquierda según tus necesidades */
+    transform: translate(-50%, -50%);
+    /* Centra verticalmente el "Pegman" */
     z-index: 2;
 }
- 
+
 
 /* Estilos para la imagen del "pegman" */
 .pegman-image {
-    width: 120px; /* Ajusta el tamaño del "pegman" según tus necesidades */
+    width: 120px;
+    /* Ajusta el tamaño del "pegman" según tus necesidades */
     height: auto;
 }
-    .search {
-        padding: 30px 30px 0 30px;
-    }
 
-    .movies {
-        padding: 30px;
-    }
-
-    .icons {
-        padding: 30px
-    }
-
+.search {
+    padding: 30px 30px 0 30px;
 }
+
+.movies {
+    padding: 30px;
+}
+
+.icons {
+    padding: 30px
+}
+
+
 
 /* Estilos para la ventana emergente */
 .modal {
@@ -231,9 +239,9 @@ h3 {
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
     overflow: auto;
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
     background-color: #fff;
     margin: 15% auto;
     padding: 20px;
@@ -241,13 +249,12 @@ h3 {
     width: 80%;
     max-width: 800px;
     position: relative;
-  }
-  
-  .close-modal {
+}
+
+.close-modal {
     position: absolute;
     top: 10px;
     right: 10px;
     font-size: 20px;
     cursor: pointer;
-  }
-  
+}

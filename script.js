@@ -23,7 +23,7 @@ const swiperConfig = {
   on: {
     slideChange: function () {
       const currentIndex = swiper.activeIndex;
-      const slideColors = ["#001938", "#331d0f", "#0f2404", "#35111d", "#3d1403"];
+      const slideColors = ["#001938", "#331d0f", "#0f2404", "#2a0606", "#3d1403"];
 
       if (currentIndex >= 0 && currentIndex < slideColors.length) {
         const backgroundColor = slideColors[currentIndex];

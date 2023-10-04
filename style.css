@@ -227,7 +227,6 @@ h3 {
 }
 
 
-
 /* Estilos para la ventana emergente */
 .modal {
     display: none;
@@ -257,4 +256,4 @@ h3 {
     right: 10px;
     font-size: 20px;
     cursor: pointer;
-}
+

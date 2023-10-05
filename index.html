@@ -68,6 +68,21 @@
     <div class="pegman-container" id="pegman-container">
         <img src="/Imagenes/normi.png" alt="Pegman" id="pegman" class="pegman-image">
     </div>
+
+    <script>
+        // Obtiene el rol de la URL
+        const params = new URLSearchParams(window.location.search);
+        const rol = params.get('rol');
+        const pegman = document.getElementById('pegman');
+
+        // Cambia la imagen de pegman según el rol seleccionado
+        if (rol === 'estudiante') {
+            pegman.src = '/Imagenes/normi.png'; // Ruta de la imagen de estudiante
+        } else if (rol === 'colaborador') {
+            pegman.src = '/Imagenes/owl.png'; // Ruta de la imagen de colaborador
+        }
+    </script>
+    
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>

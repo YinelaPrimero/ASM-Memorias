@@ -157,3 +157,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+function cambiarImagen(opcion) {
+  const pegman = document.getElementById('pegman');
+  
+  if (opcion === 'estudiante') {
+      pegman.src = '/Imagenes/normi.pg'; // Ruta de la imagen de estudiante
+  } else if (opcion === 'colaborador') {
+      pegman.src = '/Imagenes/owl.png'; // Ruta de la imagen de colaborador
+  }
+}

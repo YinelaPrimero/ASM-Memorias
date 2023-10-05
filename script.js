@@ -2,6 +2,11 @@ const body = document.body;
 const swiperContainer = document.querySelector('.swiper-container');
 const pegman = document.getElementById('pegman');
 
+const modals = document.querySelectorAll(".modal");
+const closeModalBtns = document.querySelectorAll(".close-modal");
+const images = document.querySelectorAll(".swiper-slide img");
+
+
 // Define Swiper configuration
 const swiperConfig = {
   effect: 'coverflow',
@@ -64,10 +69,54 @@ document.addEventListener('mousemove', (e) => {
       pegman.getBoundingClientRect().right <= slideBounds.right
     ) {
       swiper.slideTo(index);
+    }
+  });
+});
 
-const modals = document.querySelectorAll(".modal");
-const closeModalBtns = document.querySelectorAll(".close-modal");
-const images = document.querySelectorAll(".swiper-slide img");
+document.addEventListener('mouseup', () => {
+  if (!isDragging) return;
+  isDragging = false;
+  pegman.style.opacity = '1';
+  pegman.style.cursor = 'grab';
+  pegman.style.transition = 'all 0.3s';
+});
+
+pegman.addEventListener('dragstart', (e) => {
+  e.preventDefault();
+});
+
+// Function to update Swiper config based on viewport width
+function updateSwiperConfig() {
+  if (window.innerWidth < 576) {
+    // Adjust swiperConfig for smaller screens
+    swiperConfig.effect = 'slide'; // Change the effect for small screens, e.g., to 'slide'
+    swiperConfig.slidesPerView = 1; // Adjust the number of slides per view
+    // Add more adjustments as needed
+  } else {
+    // Restore the original swiperConfig for larger screens
+    swiperConfig.effect = 'coverflow';
+    swiperConfig.slidesPerView = 'auto';
+    // Add more adjustments as needed
+  }
+
+  // Destroy the existing Swiper instance
+  swiper.destroy();
+
+  // Initialize a new Swiper instance with the updated config
+  swiper = new Swiper('.mySwiper', swiperConfig);
+}
+
+// Initial call to set up Swiper based on viewport width
+updateSwiperConfig();
+
+// Listen for window resize events to update Swiper config
+window.addEventListener('resize', updateSwiperConfig);
+
+
+
+
+
+
 
 // Función para mostrar una ventana emergente por año
 function showModal(year) {

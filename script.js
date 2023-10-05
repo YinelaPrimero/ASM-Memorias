@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const swiperContainer = document.querySelector('.swiper-container');
   const pegman = document.getElementById('pegman');
   const pegmanContainer = document.getElementById('pegman-container');
-  
+
   const modals = document.querySelectorAll(".modal");
   const closeModalBtns = document.querySelectorAll(".close-modal");
   const images = document.querySelectorAll(".swiper-slide img");
-  
+
   // Define Swiper configuration
   const swiperConfig = {
     effect: 'coverflow',
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
       slideChange: function () {
         const currentIndex = swiper.activeIndex;
         const slideColors = ["#001938", "#331d0f", "#0f2404", "#35111d", "#3d1403"];
-  
+
         if (currentIndex >= 0 && currentIndex < slideColors.length) {
           const backgroundColor = slideColors[currentIndex];
           body.style.backgroundColor = backgroundColor;
@@ -33,17 +33,17 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     },
   };
-  
+
   // Initialize Swiper
   var swiper = new Swiper('.mySwiper', swiperConfig);
-  
+
   // Pegman Movement Variables
   let isDragging = false;
   let initialX = 0;
   let initialY = 0;
   let offsetX = 0;
   let offsetY = 0;
-  
+
   // Pegman Event Listeners
   pegmanContainer.addEventListener('mousedown', (e) => {
     isDragging = true;
@@ -54,13 +54,13 @@ document.addEventListener('DOMContentLoaded', function () {
     pegman.style.transition = 'none';
     e.preventDefault();
   });
-  
+
   document.addEventListener('mousemove', (e) => {
     if (!isDragging) return;
     offsetX = e.clientX - initialX;
     offsetY = e.clientY - initialY;
     pegmanContainer.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
-  
+
     // Check if Pegman is over a different slide and change the centered slide accordingly
     const slides = document.querySelectorAll('.swiper-slide');
     slides.forEach((slide, index) => {
@@ -73,26 +73,26 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-  
+
   document.addEventListener('mouseup', () => {
     if (!isDragging) return;
     isDragging = false;
     pegman.style.opacity = '1';
     pegman.style.cursor = 'grab';
     pegman.style.transition = 'all 0.3s';
-  
+
     // Restablecer la posición de Pegman de acuerdo a la página
     pegman.style.top = '61%';
     pegman.style.left = '39%';
-  
+
     // Restablecer la transformación del contenedor
     pegmanContainer.style.transform = 'translate(0, 0)';
   });
-  
+
   pegmanContainer.addEventListener('dragstart', (e) => {
     e.preventDefault();
   });
-  
+
   // Function to update Swiper config based on viewport width
   function updateSwiperConfig() {
     if (window.innerWidth < 576) {
@@ -106,20 +106,20 @@ document.addEventListener('DOMContentLoaded', function () {
       swiperConfig.slidesPerView = 'auto';
       // Add more adjustments as needed
     }
-  
+
     // Destroy the existing Swiper instance
     swiper.destroy();
-  
+
     // Initialize a new Swiper instance with the updated config
     swiper = new Swiper('.mySwiper', swiperConfig);
   }
-  
+
   // Initial call to set up Swiper based on viewport width
   updateSwiperConfig();
-  
+
   // Listen for window resize events to update Swiper config
   window.addEventListener('resize', updateSwiperConfig);
-  
+
   // Función para mostrar una ventana emergente por año
   function showModal(year) {
     const modalId = `modal${year}`;
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
       modal.style.display = "block";
     }
   }
-  
+
   // Evento para abrir la ventana emergente cuando se hace clic en la imagen
   images.forEach((image, index) => {
     image.addEventListener("click", () => {
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
       showModal(years[index]);
     });
   });
-  
+
   // Evento para cerrar la ventana emergente al hacer clic en el botón de cierre
   closeModalBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-  
+
   // Evento para cerrar la ventana emergente al hacer clic fuera de ella
   window.addEventListener("click", (event) => {
     modals.forEach((modal) => {

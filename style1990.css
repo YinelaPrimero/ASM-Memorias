@@ -1,0 +1,199 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background: radial-gradient(circle, #0f2404, #000000);
+  background-size: 300% 300%;
+  animation: waveBackground 20s linear infinite;
+}
+@keyframes waveBackground {
+  0% {
+      background-position: 0% 0%;
+  }
+  100% {
+      background-position: 100% 100%;
+  }
+}
+ /* Animación de título de video */
+ .video-container h2 {
+  animation: textAnimation 10s linear infinite alternate; /* Dirección opuesta */
+}
+
+/* Estilos personalizados para el encabezado */
+header {
+  background-color: #ffffff; /* Color de fondo */
+  background-image: radial-gradient(circle, transparent 1%, rgba(255, 255, 255, 0.2) 30%);
+  background-size: 300% 300%;
+  animation: waveBackground 20s linear infinite; /* Ajusta la duración según tus necesidades */
+}
+
+@keyframes waveBackground {
+  0% {
+      background-position: 0% 0%;
+  }
+  100% {
+      background-position: 100% 100%;
+  }
+}
+
+/* Animación de color de texto del encabezado */
+.header {
+  color: #fff; /* Color del texto */
+  animation: textAnimation 10s linear infinite alternate; /* Dirección opuesta */
+}
+
+/* Estilos personalizados para el encabezado */
+.header {
+  text-align: center;
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 36px;
+  margin-bottom: 10px; /* Espacio entre el título y la imagen */
+}
+
+.header img {
+  max-width: 200px; /* Ajusta el tamaño de la imagen según sea necesario */
+}
+
+.header p {
+  font-size: 18px;
+}
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas con tamaños iguales */
+  gap: 20px; /* Espacio entre los elementos de la cuadrícula */
+  padding: 20px; /* Espacio alrededor de toda la cuadrícula */
+}
+.video-container {
+  padding: 20px; /* Espaciado interno para el contenedor de video */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del contenedor */
+  border-radius: 10px; /* Borde redondeado */
+  background: transparent; /* Fondo transparente para combinar con el fondo del body */
+  position: relative; /* Permite el posicionamiento relativo para elementos internos */
+  margin-top: 20px; /* Espacio entre los contenedores de video */
+}
+
+/* Estilos para el título del video */
+.video-container h2 {
+  font-size: 24px; /* Tamaño de fuente del título */
+  margin: 0; /* Elimina el margen para evitar espacio adicional */
+  color: #ffffff; /* Color del título que combina con el fondo */
+  text-align: center; /* Centra el texto horizontalmente */
+  position: absolute; /* Posicionamiento absoluto para superponer el título */
+  top: 0; /* Coloca el título en la parte superior */
+  left: 0; /* Centra el título horizontalmente */
+  width: 100%; /* Asegura que el título ocupe todo el ancho del contenedor */
+  padding: 10px; /* Espaciado interno del título */
+  border-radius: 10px 10px 0 0; /* Borde redondeado solo en la parte superior */
+}
+
+/* Estilos para el reproductor de video */
+.video-container video {
+  max-width: 100%; /* Ancho máximo del video para que se ajuste al contenedor */
+  display: block; /* Evita problemas de alineación */
+  margin: 0 auto; /* Centra el video horizontalmente */
+  margin-top: 40px; /* Espacio entre el título y el video */
+}
+
+/* Estilos para el año grande */
+.year {
+  font-size: 48px; /* Tamaño de fuente grande para el año */
+  text-align: center; /* Centra el año horizontalmente */
+  margin-top: 20px; 
+  color: #ffffff;/* Espacio entre los videos y el año */
+}
+.titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Alinea verticalmente al centro */
+  gap: 20px;
+  padding-top: 20px;
+}
+
+h2 {
+  margin: 0;
+  color: #ffffff;
+  font-family: 'Montserrat-Bold', sans-serif;
+  font-weight: 700;
+  display: inline-block; /* Para que las letras se animen individualmente */
+}
+
+/* Define una animación suave para escalar y cambiar el estilo de difuminado de las letras */
+@keyframes letterAnimation {
+  0%, 100% {
+    font-size: 95px; /* Tamaño inicial y final */
+    filter: blur(3px); /* Difuminado inicial y final */
+  }
+  25%, 75% {
+    font-size: 100px; /* Tamaño máximo (escala) */
+    filter: blur(0px); /* Difuminación mínima (sin desenfoque) */
+  }
+}
+
+/* Aplica la animación a cada letra de manera secuencial */
+.M {
+  animation: letterAnimation 4s ease-in-out infinite, letterAnimation 4s ease-in-out infinite;
+  animation-delay: 0.5s, 0s; /* Ajusta el retraso para que las letras cambien de manera secuencial */
+}
+
+.E {
+  animation: letterAnimation 4s ease-in-out infinite, letterAnimation 4s ease-in-out infinite;
+  animation-delay: 1s, 0.5s; /* Ajusta el retraso para que las letras cambien de manera secuencial */
+}
+
+.M1 {
+  animation: letterAnimation 4s ease-in-out infinite, letterAnimation 4s ease-in-out infinite;
+  animation-delay: 1.5s, 1s; /* Ajusta el retraso para que las letras cambien de manera secuencial */
+}
+
+/* Repite el mismo patrón para las letras de "MMIAS" */
+.O {
+  animation: letterAnimation 4s ease-in-out infinite, letterAnimation 4s ease-in-out infinite;
+  animation-delay: 2s, 1.5s; /* Ajusta el retraso para que las letras cambien de manera secuencial */
+}
+
+.R {
+  animation: letterAnimation 4s ease-in-out infinite, letterAnimation 4s ease-in-out infinite;
+  animation-delay: 2.5s, 2s; /* Ajusta el retraso para que las letras cambien de manera secuencial */
+}
+
+.I {
+  animation: letterAnimation 4s ease-in-out infinite, letterAnimation 4s ease-in-out infinite;
+  animation-delay: 3s, 2.5s; /* Ajusta el retraso para que las letras cambien de manera secuencial */
+}
+
+.A {
+  animation: letterAnimation 4s ease-in-out infinite, letterAnimation 4s ease-in-out infinite;
+  animation-delay: 3.5s, 3s; /* Ajusta el retraso para que las letras cambien de manera secuencial */
+}
+
+.S {
+  animation: letterAnimation 4s ease-in-out infinite, letterAnimation 4s ease-in-out infinite;
+  animation-delay: 4s, 3.5s; /* Ajusta el retraso para que las letras cambien de manera secuencial */
+}
+
+/* Estilos para el botón "Volver al Index" */
+.back-to-index {
+  text-align: center; /* Centra el botón horizontalmente */
+  margin-top: 20px; /* Espacio superior entre el botón y otros elementos */
+}
+
+.back-to-index a {
+  display: inline-block; /* Hace que el botón se comporte como un bloque en línea */
+  padding: 10px 20px; /* Espaciado interno para el botón */
+  background-color: #ffffff; /* Color de fondo del botón (claro) */
+  border-radius: 20px; /* Bordes redondeados */
+  text-decoration: none; /* Elimina la decoración del enlace */
+  color: #333; /* Color del texto del botón */
+  transition: background-color 0.3s, color 0.3s; /* Transición suave para el cambio de color de fondo y texto */
+}
+
+.back-to-index a:hover {
+  background-color: #333; /* Color de fondo del botón al pasar el cursor (oscuro) */
+  color: #ffffff; /* Color del texto del botón al pasar el cursor (claro) */
+}

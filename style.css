@@ -8,6 +8,7 @@
 body {
     height: 100vh;
     background: radial-gradient(circle, #ffffff36, #000000ad);
+    /*"#001938", "#331d0f", "#0f2404", "#35111d", "#3d1403"*/
 }
 
 .container {
@@ -141,6 +142,8 @@ h3 {
 
 /* For screens smaller than 576px */
 @media (max-width: 576px) {
+
+    /* Example: Adjust button size or spacing for very small screens */
     .icons-button-50anos,
     .icons-button-uao,
     .icons-button-acreditacion {
@@ -152,9 +155,9 @@ h3 {
 /* Estilos para el contenedor del "pegman" */
 .pegman-container {
     position: absolute;
-    top: 61%;
-    left: 39%;
-    transform: translate(-50%, -50%);
+    top: 50%;    /* Alinea el "Pegman" verticalmente en la mitad de la página */
+    left: 30%;    /* Ajusta la distancia desde la parte izquierda según tus necesidades */
+    transform: translate(-50%, -50%);    /* Centra verticalmente el "Pegman" */
     z-index: 2;
 }
 
@@ -175,6 +178,7 @@ h3 {
 .icons {
     padding: 30px;
 }
+
 
 /* Estilos para la ventana emergente */
 .modal {

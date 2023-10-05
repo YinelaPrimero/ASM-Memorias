@@ -11,11 +11,10 @@ body {
     /*"#001938", "#331d0f", "#0f2404", "#35111d", "#3d1403"*/
 }
 
-.conainter {
+.container {
     max-width: 90%;
     margin: 0 auto;
 }
-
 
 .movies {
     padding: 50px 0 150px 0;
@@ -40,15 +39,12 @@ body {
 .swiper-slide img {
     display: block;
     width: 100%;
-
 }
-
 
 .titulo {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Alinea verticalmente al centro */
     gap: 20px;
     padding-top: 20px;
 }
@@ -57,7 +53,6 @@ body {
     display: flex;
     padding-left: 502px;
     align-items: center;
-    /* Alinea verticalmente al centro */
     gap: 0px;
     padding-bottom: 30px;
 }
@@ -73,24 +68,18 @@ h3 {
     margin: 0;
     color: #ffffff;
     letter-spacing: 6px;
-    /* Aumenta el espacio entre las letras */
     font-size: 22.5px;
 }
 
 .MMIAS {
     font-size: 80px;
-    /* Tamaño diferente para MMIAS */
     filter: blur(2px);
-    /* Desenfocar el texto MMIAS */
 }
 
 .EOR {
     font-size: 100px;
-    /* Tamaño diferente para EOR */
     filter: blur(0px);
-    /* Mantener el texto EOR enfocado (sin desenfoque) */
 }
-
 
 .historias {
     font-family: 'Montserrat-Regular', sans-serif;
@@ -105,76 +94,47 @@ h3 {
 .icons-container {
     display: flex;
     justify-content: center;
-    /* Centra horizontalmente */
     align-items: center;
-    /* Centra verticalmente */
     padding-top: 15px;
 }
 
 .icons-button-50anos {
     width: 60px;
-    /* Define el ancho y alto del botón circular */
     height: 60px;
     border-radius: 50%;
-    /* Hace que el botón tenga forma circular */
     background-image: url('/Iconos/50Anos.png');
-    /* URL de la imagen de fondo */
     background-size: 105% 80%;
     background-position: center;
-    /* Centra la imagen en el botón */
     border: none;
-    /* Elimina el borde del botón */
     cursor: pointer;
-    /* Cambia el cursor al pasar por encima */
     margin: 0 30px;
-    /* Agrega espacio horizontal entre los botones */
-
-    /* Agrega otros estilos según sea necesario */
 }
 
 .icons-button-uao {
     width: 60px;
-    /* Define el ancho y alto del botón circular */
     height: 60px;
     border-radius: 50%;
-    /* Hace que el botón tenga forma circular */
     background-image: url('/Iconos/UAO.png');
-    /* URL de la imagen de fondo */
     background-size: 110% 100%;
     background-position: center;
-    /* Centra la imagen en el botón */
     border: none;
-    /* Elimina el borde del botón */
     cursor: pointer;
-    /* Cambia el cursor al pasar por encima */
     margin: 0 30px;
-    /* Agrega espacio horizontal entre los botones */
-
-    /* Agrega otros estilos según sea necesario */
 }
 
 .icons-button-acreditacion {
     width: 60px;
-    /* Define el ancho y alto del botón circular */
     height: 60px;
     border-radius: 50%;
-    /* Hace que el botón tenga forma circular */
     background-image: url('/Iconos/Acreditacion.png');
-    /* URL de la imagen de fondo */
     background-size: 98% 98%;
     background-position: center;
-    /* Centra la imagen en el botón */
     border: none;
-    /* Elimina el borde del botón */
     cursor: pointer;
-    /* Cambia el cursor al pasar por encima */
     margin: 0 30px;
-    /* Agrega espacio horizontal entre los botones */
-
-    /* Agrega otros estilos según sea necesario */
 }
 
-@media(max-width: 991px) {
+@media (max-width: 991px) {
     body {
         min-height: 0vh;
     }
@@ -192,7 +152,6 @@ h3 {
     }
 }
 
-
 /* Estilos para el contenedor del "pegman" */
 .pegman-container {
     position: absolute;
@@ -202,11 +161,9 @@ h3 {
     z-index: 2;
 }
 
-
 /* Estilos para la imagen del "pegman" */
 .pegman-image {
     width: 120px;
-    /* Ajusta el tamaño del "pegman" según tus necesidades */
     height: auto;
 }
 
@@ -219,7 +176,7 @@ h3 {
 }
 
 .icons {
-    padding: 30px
+    padding: 30px;
 }
 
 

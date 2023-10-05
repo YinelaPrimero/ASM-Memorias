@@ -176,3 +176,25 @@ h2 {
   animation: letterAnimation 4s ease-in-out infinite, letterAnimation 4s ease-in-out infinite;
   animation-delay: 4s, 3.5s; /* Ajusta el retraso para que las letras cambien de manera secuencial */
 }
+
+
+/* Estilos para el botón "Volver al Index" */
+.back-to-index {
+  text-align: center; /* Centra el botón horizontalmente */
+  margin-top: 20px; /* Espacio superior entre el botón y otros elementos */
+}
+
+.back-to-index a {
+  display: inline-block; /* Hace que el botón se comporte como un bloque en línea */
+  padding: 10px 20px; /* Espaciado interno para el botón */
+  background-color: #ffffff; /* Color de fondo del botón (claro) */
+  border-radius: 20px; /* Bordes redondeados */
+  text-decoration: none; /* Elimina la decoración del enlace */
+  color: #333; /* Color del texto del botón */
+  transition: background-color 0.3s, color 0.3s; /* Transición suave para el cambio de color de fondo y texto */
+}
+
+.back-to-index a:hover {
+  background-color: #333; /* Color de fondo del botón al pasar el cursor (oscuro) */
+  color: #ffffff; /* Color del texto del botón al pasar el cursor (claro) */
+}

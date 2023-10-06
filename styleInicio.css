@@ -135,7 +135,7 @@ button::before
 
 .subtitulo {
     display: flex;
-    padding-left: 502px;
+    padding-left: 94px;
     align-items: center;
     gap: 0px;
     padding-bottom: 30px;
@@ -181,6 +181,9 @@ h3 {
     padding: 20px;
     border-radius: 10px;
     width: 100%; /* Establece el ancho al 100% del viewport */
+}
+.bottom-container {
+    text-align: center;
 }
 
 

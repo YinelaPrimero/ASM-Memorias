@@ -67,8 +67,25 @@
         </div>
 
     </div>
+    <div class="pegman-container" id="pegman-container">
+        <img src="/Imagenes/normi.png" alt="Pegman" id="pegman" class="pegman-image">
+    </div>
     <div class="back-to-index">
         <a href="index.html">Volver</a>
+        <script>
+            // Obtiene el rol de la URL
+            const params = new URLSearchParams(window.location.search);
+            const rol = params.get('rol');
+            const pegman = document.getElementById('pegman');
+
+            // Cambia la imagen de pegman según el rol seleccionado
+            if (rol === 'estudiante') {
+                pegman.src = '/Imagenes/normi.png'; // Ruta de la imagen de estudiante
+            } else if (rol === 'colaborador') {
+                pegman.src = '/Imagenes/owl.png'; // Ruta de la imagen de colaborador
+            }
+        </script>
+
     </div>
 </body>
 

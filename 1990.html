@@ -57,7 +57,7 @@
             <p class="description-text">A medida que transcurrieron los años, se fueron concluyendo los detalles estructurales y estéticos en el campus universitario de la Universidad Autónoma de Occidente. Este proceso de finalización y refinamiento en la apariencia y la funcionalidad del campus contribuyó a crear un entorno universitario más completo y atractivo, que se convirtió en un lugar propicio para el aprendizaje y el desarrollo académico. </p>
         </div>
         <video controls>
-            <source src="/Videos/UAO 50 años  80s.mp4" type="video/mp4">
+            <source src="/Videos/UAO 50 años  90s.mp4" type="video/mp4">
             Tu navegador no admite la reproducción de video.
         </video>
     </div>
@@ -65,6 +65,19 @@
 
     <div class="back-to-index">
         <a href="index.html">Volver</a>
+        <script>
+            // Obtiene el rol de la URL
+            const params = new URLSearchParams(window.location.search);
+            const rol = params.get('rol');
+            const pegman = document.getElementById('pegman');
+    
+            // Cambia la imagen de pegman según el rol seleccionado
+            if (rol === 'estudiante') {
+                pegman.src = '/Imagenes/normi.png'; // Ruta de la imagen de estudiante
+            } else if (rol === 'colaborador') {
+                pegman.src = '/Imagenes/owl.png'; // Ruta de la imagen de colaborador
+            }
+        </script>
     </div>
 </body>
 

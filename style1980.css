@@ -5,7 +5,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 body {
-  background: radial-gradient(circle, #001938, #000000);
+  background: radial-gradient(circle, #835232, #000000);
   background-size: 300% 300%;
   animation: waveBackground 20s linear infinite;
 }
@@ -252,3 +252,17 @@ h2 {
   background-color: #333; /* Cambia el fondo al pasar el cursor (oscuro) */
   color: #ffffff; /* Cambia el color del texto al pasar el cursor (claro) */
 }
+.pegman-container {
+  position: absolute;
+  top: 60%;    /* Alinea el "Pegman" verticalmente en la mitad de la página */
+  left: 5%;    /* Ajusta la distancia desde la parte izquierda según tus necesidades */
+  transform: translate(-50%, -50%);    /* Centra verticalmente el "Pegman" */
+  z-index: 2;
+}
+
+/* Estilos para la imagen del "pegman" */
+.pegman-image {
+  width: 120px;
+  height: auto;
+}
+

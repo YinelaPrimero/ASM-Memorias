@@ -22,6 +22,7 @@ body {
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  float: left;
   font-size: 30px;
   cursor: pointer;
   width: 50%; /* Cada botón ocupa el 50% del espacio disponible */

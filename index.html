@@ -68,7 +68,7 @@
     </section>
     
     <div class="pegman-container" id="pegman-container">
-        <img src="/Imagenes/normi.png" alt="Pegman" id="pegman" class="pegman-image">
+        <img src="./Imagenes/normi.png" alt="Pegman" id="pegman" class="pegman-image">
     </div>
     
 
@@ -80,9 +80,9 @@
     
             // Cambia la imagen de pegman según el rol seleccionado o el almacenado en localStorage
             if (storedRol === 'estudiante') {
-                pegman.src = '/Imagenes/normi.png'; // Ruta de la imagen de estudiante
+                pegman.src = './Imagenes/normi.png'; // Ruta de la imagen de estudiante
             } else if (storedRol === 'colaborador') {
-                pegman.src = '/Imagenes/owl.png'; // Ruta de la imagen de colaborador
+                pegman.src = './Imagenes/owl.png'; // Ruta de la imagen de colaborador
             }
         });
     </script>

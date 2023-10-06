@@ -4,22 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap" rel="stylesheet">
+    <title>Memorias</title>
+    <link rel="stylesheet" href="styleInicio.css">
 </head>
 
 <body>
-    <div class = "header-container1">
+    <div class="header-container">
         <div class="titulo">
             <h2 class="MMIAS">M</h2>
             <h2 class="EOR">E</h2>
@@ -37,59 +27,21 @@
         </div>
     </div>
 
-    <section class="memorias container">
-
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="1970.html"><img src="./Imagenes/1970.jpg" alt="Video 1"></a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="1980.html"><img src="./Imagenes/1980.jpg" alt="Video 2"></a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="1990.html"><img src="./Imagenes/1990.jpg" alt="Video 2"></a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="2000.html"><img src="./Imagenes/2000.jpg" alt="Video 2"></a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="2010.html"><img src="./Imagenes/2010.jpg" alt="Video 2"></a>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-    <section class="icons-container">
-        <button class="icons-button-acreditacion"> </button>
-        <button class="icons-button-50anos"> </button>
-        <button class="icons-button-uao"> </button>
-    </section>
-    
-    <div class="pegman-container" id="pegman-container">
-        <img src="./Imagenes/normi.png" alt="Pegman" id="pegman" class="pegman-image">
+    <div class="bottom-container">
+        <h1 class="Eleccion">Selecciona tu rol</h1>
+        <button class="button" onclick="cambiarImagen('estudiante')">Estudiante</button>
+        <button class="button" onclick="cambiarImagen('colaborador')">Colaborador</button>
     </div>
-    
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Obtiene el rol de localStorage si existe
-            const storedRol = localStorage.getItem('selectedRol');
-            const pegman = document.getElementById('pegman');
-    
-            // Cambia la imagen de pegman según el rol seleccionado o el almacenado en localStorage
-            if (storedRol === 'estudiante') {
-                pegman.src = './Imagenes/normi.png'; // Ruta de la imagen de estudiante
-            } else if (storedRol === 'colaborador') {
-                pegman.src = './Imagenes/owl.png'; // Ruta de la imagen de colaborador
-            }
-        });
-    </script>
+        function cambiarImagen(rol) {
+            // Almacena el rol seleccionado en localStorage
+            localStorage.setItem('selectedRol', rol);
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
-    
+            // Redirige al otro HTML y pasa el rol como parámetro en la URL
+            window.location.href = `index.html?rol=${rol}`;
+        }
+    </script>
 </body>
 
 </html>

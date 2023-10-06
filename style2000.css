@@ -15,13 +15,12 @@ body {
   padding-top: 15px;
 }
 .btn-group .button {
-  background-color: #850608; /* Green */
+  background-color: #1C203D; /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 30px;
   float: left;
   cursor: pointer;

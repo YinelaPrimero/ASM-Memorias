@@ -32,10 +32,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       },
     },
+  
   };
 
   // Initialize Swiper
   var swiper = new Swiper('.mySwiper', swiperConfig);
+
+
 
   // Pegman Movement Variables
   let isDragging = false;
@@ -93,6 +96,43 @@ document.addEventListener('DOMContentLoaded', function () {
     e.preventDefault();
   });
 
+  // Agrega un manejador de eventos para las teclas de flecha
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'ArrowLeft') {
+    // Mueve el personaje hacia la izquierda
+    pegmanContainer.style.transform = `translateX(${parseInt(pegmanContainer.style.transform.split("(")[1]) - 10}px)`;
+  } else if (e.key === 'ArrowRight') {
+    // Mueve el personaje hacia la derecha
+    pegmanContainer.style.transform = `translateX(${parseInt(pegmanContainer.style.transform.split("(")[1]) + 10}px)`;
+  }
+});
+// Función para mover el personaje con las flechas del teclado
+function moveCharacter(direction) {
+  const character = document.getElementById('pegman');
+  const currentPosition = getComputedStyle(character).transform;
+  const currentX = parseInt(currentPosition.split(',')[4]) || 0;
+  const currentY = parseInt(currentPosition.split(',')[5]) || 0;
+  const step = 10; // Ajusta la cantidad de movimiento según lo necesites
+
+  switch (direction) {
+    case 'left':
+      character.style.transform = `translate(${currentX - step}px, ${currentY}px)`;
+      break;
+    case 'right':
+      character.style.transform = `translate(${currentX + step}px, ${currentY}px)`;
+      break;
+    // Agrega más casos para otras direcciones si es necesario
+  }
+}
+
+// Agrega un manejador de eventos para las teclas de flecha
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'ArrowLeft') {
+    moveCharacter('left');
+  } else if (e.key === 'ArrowRight') {
+    moveCharacter('right');
+  }
+});
   // Function to update Swiper config based on viewport width
   function updateSwiperConfig() {
     if (window.innerWidth < 576) {
@@ -156,14 +196,21 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') {
+      swiper.slidePrev(); // Cambiar a la diapositiva anterior
+    } else if (e.key === 'ArrowRight') {
+      swiper.slideNext(); // Cambiar a la siguiente diapositiva
+    }
+  });
 });
 
 function cambiarImagen(opcion) {
   const pegman = document.getElementById('pegman');
-  
+
   if (opcion === 'estudiante') {
-      pegman.src = '/Imagenes/normi.pg'; // Ruta de la imagen de estudiante
+    pegman.src = '/Imagenes/normi.pg'; // Ruta de la imagen de estudiante
   } else if (opcion === 'colaborador') {
-      pegman.src = '/Imagenes/owl.png'; // Ruta de la imagen de colaborador
+    pegman.src = '/Imagenes/owl.png'; // Ruta de la imagen de colaborador
   }
 }

@@ -155,8 +155,8 @@ h3 {
 /* Estilos para el contenedor del "pegman" */
 .pegman-container {
     position: absolute;
-    top: 50%;    /* Alinea el "Pegman" verticalmente en la mitad de la página */
-    left: 30%;    /* Ajusta la distancia desde la parte izquierda según tus necesidades */
+    top: 60%;    /* Alinea el "Pegman" verticalmente en la mitad de la página */
+    left: 50%;    /* Ajusta la distancia desde la parte izquierda según tus necesidades */
     transform: translate(-50%, -50%);    /* Centra verticalmente el "Pegman" */
     z-index: 2;
 }
@@ -209,4 +209,13 @@ h3 {
     right: 10px;
     font-size: 20px;
     cursor: pointer;
+
 }
+.character {
+    /* Otras propiedades de estilo para el personaje */
+  
+    /* Propiedades de transición */
+    transition-property: transform; /* La propiedad que queremos animar es 'transform' */
+    transition-duration: 0.3s; /* Duración de la animación en segundos */
+    transition-timing-function: ease; /* Función de temporización de la animación (suavizado) */
+  }

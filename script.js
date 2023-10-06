@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       },
     },
-  
+
   };
 
   // Initialize Swiper
@@ -97,42 +97,42 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Agrega un manejador de eventos para las teclas de flecha
-document.addEventListener('keydown', function (e) {
-  if (e.key === 'ArrowLeft') {
-    // Mueve el personaje hacia la izquierda
-    pegmanContainer.style.transform = `translateX(${parseInt(pegmanContainer.style.transform.split("(")[1]) - 10}px)`;
-  } else if (e.key === 'ArrowRight') {
-    // Mueve el personaje hacia la derecha
-    pegmanContainer.style.transform = `translateX(${parseInt(pegmanContainer.style.transform.split("(")[1]) + 10}px)`;
-  }
-});
-// Función para mover el personaje con las flechas del teclado
-function moveCharacter(direction) {
-  const character = document.getElementById('pegman');
-  const currentPosition = getComputedStyle(character).transform;
-  const currentX = parseInt(currentPosition.split(',')[4]) || 0;
-  const currentY = parseInt(currentPosition.split(',')[5]) || 0;
-  const step = 10; // Ajusta la cantidad de movimiento según lo necesites
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') {
+      // Mueve el personaje hacia la izquierda
+      pegmanContainer.style.transform = `translateX(${parseInt(pegmanContainer.style.transform.split("(")[1]) - 10}px)`;
+    } else if (e.key === 'ArrowRight') {
+      // Mueve el personaje hacia la derecha
+      pegmanContainer.style.transform = `translateX(${parseInt(pegmanContainer.style.transform.split("(")[1]) + 10}px)`;
+    }
+  });
+  // Función para mover el personaje con las flechas del teclado
+  function moveCharacter(direction) {
+    const character = document.getElementById('pegman');
+    const currentPosition = getComputedStyle(character).transform;
+    const currentX = parseInt(currentPosition.split(',')[4]) || 0;
+    const currentY = parseInt(currentPosition.split(',')[5]) || 0;
+    const step = 10; // Ajusta la cantidad de movimiento según lo necesites
 
-  switch (direction) {
-    case 'left':
-      character.style.transform = `translate(${currentX - step}px, ${currentY}px)`;
-      break;
-    case 'right':
-      character.style.transform = `translate(${currentX + step}px, ${currentY}px)`;
-      break;
-    // Agrega más casos para otras direcciones si es necesario
+    switch (direction) {
+      case 'left':
+        character.style.transform = `translate(${currentX - step}px, ${currentY}px)`;
+        break;
+      case 'right':
+        character.style.transform = `translate(${currentX + step}px, ${currentY}px)`;
+        break;
+      // Agrega más casos para otras direcciones si es necesario
+    }
   }
-}
 
-// Agrega un manejador de eventos para las teclas de flecha
-document.addEventListener('keydown', function (e) {
-  if (e.key === 'ArrowLeft') {
-    moveCharacter('left');
-  } else if (e.key === 'ArrowRight') {
-    moveCharacter('right');
-  }
-});
+  // Agrega un manejador de eventos para las teclas de flecha
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') {
+      moveCharacter('left');
+    } else if (e.key === 'ArrowRight') {
+      moveCharacter('right');
+    }
+  });
   // Function to update Swiper config based on viewport width
   function updateSwiperConfig() {
     if (window.innerWidth < 576) {
@@ -196,13 +196,30 @@ document.addEventListener('keydown', function (e) {
       }
     });
   });
+
   document.addEventListener('keydown', function (e) {
     if (e.key === 'ArrowLeft') {
       swiper.slidePrev(); // Cambiar a la diapositiva anterior
     } else if (e.key === 'ArrowRight') {
       swiper.slideNext(); // Cambiar a la siguiente diapositiva
     }
+    // Verifica si la tecla "m" se presionó y el Swiper está centrado en una diapositiva
+    if (e.key === 'm') {
+      // Espera a que el Swiper se actualice después del cambio de diapositiva
+      setTimeout(function () {
+        const centeredSlideIndex = swiper.realIndex;
+        const decadeUrls = ['1970.html', '1980.html', '1990.html', '2000.html', '2010.html'];
+
+        if (centeredSlideIndex >= 0 && centeredSlideIndex < decadeUrls.length) {
+          window.location.href = decadeUrls[centeredSlideIndex];
+        }
+      }, 100); // Ajusta este valor si es necesario para dar tiempo al Swiper a actualizarse
+    }
+
+
   });
+
+
 });
 
 function cambiarImagen(opcion) {

@@ -223,6 +223,21 @@ h2 {
   color: #ffffff; /* Color del texto del botón al pasar el cursor (claro) */
 }
 
+.pegman-container {
+  position: fixed; /* Cambia a posición fija */
+  top: 80%;        /* Alinea el "Pegman" verticalmente en la mitad de la página */
+  left: 5%;       /* Ajusta la distancia desde la parte izquierda según tus necesidades */
+  transform: translate(-50%, -50%); /* Centra verticalmente el "Pegman" */
+  z-index: 2;
+}
+
+/* Estilos para la imagen del "pegman" */
+.pegman-image {
+  width: 120px;
+  height: auto;
+}
+
+
 .year {
   text-align: center; /* Centra el contenido horizontalmente */
   margin-top: 20px; /* Espacio entre los videos y el año */

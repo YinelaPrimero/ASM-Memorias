@@ -106,7 +106,7 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 15px;
+    padding: 100px;
 }
 
 .icons-button-50anos {
@@ -166,7 +166,7 @@ h3 {
 /* Estilos para el contenedor del "pegman" */
 .pegman-container {
     position: absolute;
-    top: 60%;    /* Alinea el "Pegman" verticalmente en la mitad de la página */
+    top: 65%;    /* Alinea el "Pegman" verticalmente en la mitad de la página */
     left: 50%;    /* Ajusta la distancia desde la parte izquierda según tus necesidades */
     transform: translate(-50%, -50%);    /* Centra verticalmente el "Pegman" */
     z-index: 2;

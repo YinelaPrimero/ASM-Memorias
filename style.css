@@ -126,7 +126,7 @@ h3 {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-image: url('/Iconos/50Anos.png');
+    background-image: url('./Iconos/50Anos.png');
     background-size: 105% 80%;
     background-position: center;
     border: none;
@@ -138,7 +138,7 @@ h3 {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-image: url('/Iconos/UAO.png');
+    background-image: url('./Iconos/UAO.png');
     background-size: 110% 100%;
     background-position: center;
     border: none;
@@ -150,7 +150,7 @@ h3 {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-image: url('/Iconos/Acreditacion.png');
+    background-image: url('./Iconos/Acreditacion.png');
     background-size: 98% 98%;
     background-position: center;
     border: none;

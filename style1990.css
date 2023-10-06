@@ -24,7 +24,6 @@ body {
   display: inline-block;
   font-size: 30px;
   cursor: pointer;
-  float: left;
   width: 50%; /* Cada botón ocupa el 50% del espacio disponible */
   box-sizing: border-box; /* Asegura que el padding no afecte al ancho */
 }

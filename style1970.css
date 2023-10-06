@@ -4,10 +4,37 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: radial-gradient(circle, #001938, #000000);
   background-size: 300% 300%;
   animation: waveBackground 20s linear infinite;
+}
+.btn-group
+{
+  padding-top: 15px;
+}
+.btn-group .button {
+  background-color: #1C203D; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  cursor: pointer;
+  float: left;
+  width: 50%; /* Cada botón ocupa el 50% del espacio disponible */
+  box-sizing: border-box; /* Asegura que el padding no afecte al ancho */
+}
+
+.btn-group .button:hover {
+  background-color: #181C34;
 }
 @keyframes waveBackground {
   0% {
@@ -249,7 +276,7 @@ h2 {
 
 /* Animación de resaltado al pasar el cursor */
 .video-title:hover {
-  background-color: #333; /* Cambia el fondo al pasar el cursor (oscuro) */
+  background-color: #181C34; /* Cambia el fondo al pasar el cursor (oscuro) */
   color: #ffffff; /* Cambia el color del texto al pasar el cursor (claro) */
 }
 

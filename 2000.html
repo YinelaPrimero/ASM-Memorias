@@ -65,23 +65,24 @@
         </div>
     </div>
     <div class="pegman-container" id="pegman-container">
-        <img src="/Imagenes/normi_lado.png" alt="Pegman" id="pegman" class="pegman-image">
+        <img src="" alt="Pegman" id="pegman" class="pegman-image">
     </div>
     <div class="back-to-index">
         <a href="index.html">Volver</a>
-        <script>
-            // Obtiene el rol seleccionado almacenado en localStorage
-            const selectedRol = localStorage.getItem('selectedRol');
-            const pegman = document.getElementById('pegman');
-    
-            // Cambia la imagen de Pegman según el rol seleccionado
-            if (selectedRol === 'estudiante') {
-                pegman.src = '/Imagenes/normi_lado.png'; // Ruta de la imagen de estudiante
-            } else if (selectedRol === 'colaborador') {
-                pegman.src = '/Imagenes/owl_lado.png'; // Ruta de la imagen de colaborador
-            }
-        </script>
     </div>
+
+    <script>
+        // Obtiene el rol seleccionado almacenado en localStorage
+        const selectedRol = localStorage.getItem('selectedRol');
+        const pegman = document.getElementById('pegman');
+
+        // Cambia la imagen de Pegman según el rol seleccionado
+        if (selectedRol === 'estudiante') {
+            pegman.src = '/Imagenes/normi_lado.png'; // Ruta de la imagen de estudiante
+        } else if (selectedRol === 'colaborador') {
+            pegman.src = '/Imagenes/owl_lado.png'; // Ruta de la imagen de colaborador
+        }
+    </script>
 </body>
 
 </html>

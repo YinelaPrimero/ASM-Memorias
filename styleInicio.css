@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: #001938;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Añadido para centrar verticalmente */
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.subtitulo {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    padding-bottom: 30px;
+}
+
+.Eleccion {
+    color: #ffffff;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+    margin-top: 20px;
+}
+
+.button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 40px;
+    border-radius: 10px;
+}s
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.subtitulo {
+    display: flex;
+    padding-left: 502px;
+    align-items: center;
+    gap: 0px;
+    padding-bottom: 30px;
+}
+
+h2 {
+    margin: 0;
+    color: #ffffff;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 700;
+}
+
+h3 {
+    margin: 0;
+    color: #ffffff;
+    letter-spacing: 6px;
+    font-size: 22.5px;
+}
+
+.MMIAS {
+    font-size: 80px;
+    filter: blur(2px);
+}
+
+.EOR {
+    font-size: 100px;
+    filter: blur(0px);
+}
+
+.historias {
+    font-family: 'Montserrat-Regular', sans-serif;
+    font-weight: 600;
+}
+
+.entre {
+    font-family: 'Montserrat-ExtraLight', sans-serif;
+    font-weight: 100;
+}

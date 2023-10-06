@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const closeModalBtns = document.querySelectorAll(".close-modal");
   const images = document.querySelectorAll(".swiper-slide img");
 
+  
+
   // Define Swiper configuration
   const swiperConfig = {
     effect: 'coverflow',
@@ -24,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     on: {
       slideChange: function () {
         const currentIndex = swiper.activeIndex;
-        const slideColors = ["#001938", "#331d0f", "#0f2404", "#35111d", "#3d1403"];
+        const slideColors = ["#131547", "#835232", "#0f2404", "#8D2527", "#983B27"];
 
         if (currentIndex >= 0 && currentIndex < slideColors.length) {
           const backgroundColor = slideColors[currentIndex];
@@ -32,10 +34,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       },
     },
+
   };
 
   // Initialize Swiper
   var swiper = new Swiper('.mySwiper', swiperConfig);
+
+
 
   // Pegman Movement Variables
   let isDragging = false;
@@ -93,6 +98,43 @@ document.addEventListener('DOMContentLoaded', function () {
     e.preventDefault();
   });
 
+  // Agrega un manejador de eventos para las teclas de flecha
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') {
+      // Mueve el personaje hacia la izquierda
+      pegmanContainer.style.transform = `translateX(${parseInt(pegmanContainer.style.transform.split("(")[1]) - 10}px)`;
+    } else if (e.key === 'ArrowRight') {
+      // Mueve el personaje hacia la derecha
+      pegmanContainer.style.transform = `translateX(${parseInt(pegmanContainer.style.transform.split("(")[1]) + 10}px)`;
+    }
+  });
+  // Función para mover el personaje con las flechas del teclado
+  function moveCharacter(direction) {
+    const character = document.getElementById('pegman');
+    const currentPosition = getComputedStyle(character).transform;
+    const currentX = parseInt(currentPosition.split(',')[4]) || 0;
+    const currentY = parseInt(currentPosition.split(',')[5]) || 0;
+    const step = 10; // Ajusta la cantidad de movimiento según lo necesites
+
+    switch (direction) {
+      case 'left':
+        character.style.transform = `translate(${currentX - step}px, ${currentY}px)`;
+        break;
+      case 'right':
+        character.style.transform = `translate(${currentX + step}px, ${currentY}px)`;
+        break;
+      // Agrega más casos para otras direcciones si es necesario
+    }
+  }
+
+  // Agrega un manejador de eventos para las teclas de flecha
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') {
+      moveCharacter('left');
+    } else if (e.key === 'ArrowRight') {
+      moveCharacter('right');
+    }
+  });
   // Function to update Swiper config based on viewport width
   function updateSwiperConfig() {
     if (window.innerWidth < 576) {
@@ -156,14 +198,38 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') {
+      swiper.slidePrev(); // Cambiar a la diapositiva anterior
+    } else if (e.key === 'ArrowRight') {
+      swiper.slideNext(); // Cambiar a la siguiente diapositiva
+    }
+    // Verifica si la tecla "m" se presionó y el Swiper está centrado en una diapositiva
+    if (e.key === 'm') {
+      // Espera a que el Swiper se actualice después del cambio de diapositiva
+      setTimeout(function () {
+        const centeredSlideIndex = swiper.realIndex;
+        const decadeUrls = ['1970.html', '1980.html', '1990.html', '2000.html', '2010.html'];
+
+        if (centeredSlideIndex >= 0 && centeredSlideIndex < decadeUrls.length) {
+          window.location.href = decadeUrls[centeredSlideIndex];
+        }
+      }, 100); // Ajusta este valor si es necesario para dar tiempo al Swiper a actualizarse
+    }
+
+
+  });
+
+
 });
 
 function cambiarImagen(opcion) {
   const pegman = document.getElementById('pegman');
-  
+
   if (opcion === 'estudiante') {
-      pegman.src = '/Imagenes/normi.pg'; // Ruta de la imagen de estudiante
+    pegman.src = '/Imagenes/normi.pg'; // Ruta de la imagen de estudiante
   } else if (opcion === 'colaborador') {
-      pegman.src = '/Imagenes/owl.png'; // Ruta de la imagen de colaborador
+    pegman.src = '/Imagenes/owl.png'; // Ruta de la imagen de colaborador
   }
 }

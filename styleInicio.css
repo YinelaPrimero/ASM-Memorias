@@ -7,7 +7,7 @@
 
 body {
     height: 100vh;
-    background: #001938;
+    background: radial-gradient(circle at center, #737274 0%, #211F20 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,12 +17,11 @@ body {
 .header-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /*align-items: center;*/
     justify-content: center;
-    height: 40vh;
+    height: 40vh;   
 }
-
-.titulo {
+.titulo1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,18 +29,53 @@ body {
     padding-top: 20px;
 }
 
-.subtitulo {
+.subtitulo1 {
     display: flex;
-    align-items: center;
     gap: 0px;
     padding-bottom: 30px;
+    justify-content: flex-start; /* Alinea el subtítulo hacia la izquierda */
+    padding-left: 95px; /* Agrega un espacio hacia la izquierda */
+}
+
+h2 {
+    margin: 0;
+    color: #ffffff;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 700;
+}
+
+h3 {
+    margin: 0;
+    color: #ffffff;
+    letter-spacing: 6px;
+    font-size: 22.5px;
+}
+
+.MMIAS1 {
+    font-size: 80px;
+    filter: blur(2px);
+}
+
+.EOR1 {
+    font-size: 100px;
+    filter: blur(0px);
+}
+
+.historias1 {
+    font-family: 'Montserrat-Regular', sans-serif;
+    font-weight: 600;
+}
+
+.entre1 {
+    font-family: 'Montserrat-ExtraLight', sans-serif;
+    font-weight: 100;
 }
 
 .Eleccion {
     color: #ffffff;
     font-family: 'Montserrat-Bold', sans-serif;
-    font-weight: 700;
-    font-size: 80px;
+    font-weight: 400;
+    font-size: 30px;
     margin-top: 20px;
 }
 
@@ -49,12 +83,47 @@ body {
     background-color: #ffffff;
     color: #000000;
     border: none;
-    padding: 15px 30px;
+    padding: 16px 32px;
     font-size: 18px;
     cursor: pointer;
     margin: 40px;
+    border-radius: 12px;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    position: relative;
+  
+}
+
+button::before
+{
+    content:"";
+    position: absolute;
+    top: 0; /* Centrar verticalmente en relación al botón */
+    left: 0; /* Centrar horizontalmente en relación al botón */
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+         #912324, #C4833E, #677130, #131547,
+         #912324, #C4833E, #677130, #131547
+    ); 
+    background-size:800% ;
     border-radius: 10px;
-}s
+    filter: blur(10px);
+    animation: glowing 20s linear infinite
+
+}
+
+@keyframes glowing {
+    0%{background-position: 0 0 ;}
+    50%{ background-position: 400% 0 ;}
+    100%{background-position: 0 0 ;}
+
+
+    
+}
 
 .titulo {
     display: flex;
@@ -105,3 +174,14 @@ h3 {
     font-family: 'Montserrat-ExtraLight', sans-serif;
     font-weight: 100;
 }
+
+.container {
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Agrega sombra al contenedor principal */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%; /* Establece el ancho al 100% del viewport */
+}
+
+
+

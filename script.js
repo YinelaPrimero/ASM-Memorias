@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const closeModalBtns = document.querySelectorAll(".close-modal");
   const images = document.querySelectorAll(".swiper-slide img");
 
+  
+
   // Define Swiper configuration
   const swiperConfig = {
     effect: 'coverflow',

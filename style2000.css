@@ -5,7 +5,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 body {
-  background: radial-gradient(circle, #35111d, #000000);
+  background: radial-gradient(circle, #501b2d, #000000);
   background-size: 300% 300%;
   animation: waveBackground 20s linear infinite;
 }
@@ -20,7 +20,7 @@ body {
  /* Animación de título de video */
  .video-container h2 {
   animation: textAnimation 10s linear infinite alternate; /* Dirección opuesta */
-}
+} 
 
 /* Estilos personalizados para el encabezado */
 header {

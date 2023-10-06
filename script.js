@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     on: {
       slideChange: function () {
         const currentIndex = swiper.activeIndex;
-        const slideColors = ["#001938", "#331d0f", "#0f2404", "#35111d", "#3d1403"];
+        const slideColors = ["#131547", "#835232", "#0f2404", "#8D2527", "#983B27"];
 
         if (currentIndex >= 0 && currentIndex < slideColors.length) {
           const backgroundColor = slideColors[currentIndex];

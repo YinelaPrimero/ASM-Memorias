@@ -252,11 +252,12 @@ h2 {
   background-color: #333; /* Cambia el fondo al pasar el cursor (oscuro) */
   color: #ffffff; /* Cambia el color del texto al pasar el cursor (claro) */
 }
+
 .pegman-container {
-  position: absolute;
-  top: 60%;    /* Alinea el "Pegman" verticalmente en la mitad de la página */
-  left: 5%;    /* Ajusta la distancia desde la parte izquierda según tus necesidades */
-  transform: translate(-50%, -50%);    /* Centra verticalmente el "Pegman" */
+  position: fixed; /* Cambia a posición fija */
+  top: 80%;        /* Alinea el "Pegman" verticalmente en la mitad de la página */
+  left: 5%;       /* Ajusta la distancia desde la parte izquierda según tus necesidades */
+  transform: translate(-50%, -50%); /* Centra verticalmente el "Pegman" */
   z-index: 2;
 }
 

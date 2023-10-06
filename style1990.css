@@ -9,6 +9,30 @@ body {
   background-size: 300% 300%;
   animation: waveBackground 20s linear infinite;
 }
+
+.btn-group
+{
+  padding-top: 15px;
+}
+.btn-group .button {
+  background-color: #2a4d19; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  cursor: pointer;
+  float: left;
+  width: 50%; /* Cada botón ocupa el 50% del espacio disponible */
+  box-sizing: border-box; /* Asegura que el padding no afecte al ancho */
+}
+
+.btn-group .button:hover {
+  background-color: #233519;
+}
+
 @keyframes waveBackground {
   0% {
       background-position: 0% 0%;
@@ -195,7 +219,7 @@ h2 {
 }
 
 .back-to-index a:hover {
-  background-color: #333; /* Color de fondo del botón al pasar el cursor (oscuro) */
+  background-color: #233519; /* Color de fondo del botón al pasar el cursor (oscuro) */
   color: #ffffff; /* Color del texto del botón al pasar el cursor (claro) */
 }
 
@@ -213,3 +237,57 @@ h2 {
   height: auto;
 }
 
+
+.year {
+  text-align: center; /* Centra el contenido horizontalmente */
+  margin-top: 20px; /* Espacio entre los videos y el año */
+}
+
+/* Estilos para la línea de tiempo */
+.time-period {
+  display: flex; /* Utiliza flexbox para alinear los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  font-size: 24px; /* Tamaño de fuente para los años */
+  color: #ffffff; /* Color de texto para los años */
+  background-color: rgba(255, 255, 255, 0.2); /* Color de fondo para la línea de tiempo (transparente con opacidad) */
+  padding: 10px 20px; /* Espaciado interno para la línea de tiempo */
+  border-radius: 10px; /* Bordes redondeados para la línea de tiempo */
+}
+
+/* Estilos para los años dentro de la línea de tiempo */
+.time-period span {
+  margin: 0 10px; /* Espacio entre los años */
+}
+
+/* Estilos para el texto descriptivo */
+.description-text {
+  color: #ffffff; /* Color de texto blanco */
+  font-size: 18px; /* Tamaño de fuente más grande */
+  text-align: justify; /* Texto justificado */
+  padding: 10px; /* Espaciado interno para el texto */
+  padding-top: 40px;
+  padding-left: 130px;
+  padding-right: 130px;
+}
+
+.video-title {
+  font-size: 24px;
+  margin: 0;
+  color: #ffffff;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  transition: background-color 0.3s, color 0.3s;
+  /* Cambia el cursor al pasar el ratón */
+}
+
+/* Animación de resaltado al pasar el cursor */
+.video-title:hover {
+  background-color: #333; /* Cambia el fondo al pasar el cursor (oscuro) */
+  color: #ffffff; /* Cambia el color del texto al pasar el cursor (claro) */
+}

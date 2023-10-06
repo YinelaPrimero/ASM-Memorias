@@ -32,27 +32,44 @@
 
         </h2>
     </div>
-    
-    <div class="year">
-        1990 
+
+    <div class="btn-group">
+        <a class="button" href="#seccion1">1994</a>
+        <a class="button" href="#seccion2">1999</a>
     </div>
+
     <div class="video-grid">
-        <div class="video-container">
-            <h2>Video 1</h2>
+        <div class="video-container" id="seccion1">
+            <h2 class="video-title">Consolidación institucional y educativa</h2>
+            <div class="video-description">
+                <p class="description-text">A medida que transcurrieron los años, se fueron concluyendo los detalles
+                    estructurales y estéticos en el campus universitario de la Universidad Autónoma de Occidente. Este
+                    proceso de finalización y refinamiento en la apariencia y la funcionalidad del campus contribuyó a
+                    crear un entorno universitario más completo y atractivo, que se convirtió en un lugar propicio para
+                    el aprendizaje y el desarrollo académico. </p>
+            </div>
             <video controls>
                 <source src="/Videos/UAO 50 años  90s -1.mp4" type="video/mp4">
                 Tu navegador no admite la reproducción de video.
             </video>
         </div>
 
-        <div class="video-container">
-            <h2>Video 2</h2>
+        <div class="video-container" id="seccion2">
+            <h2 class="video-title">Finalización y estetica del campus</h2>
+            <div class="video-description">
+                <p class="description-text">A medida que transcurrieron los años, se fueron concluyendo los detalles
+                    estructurales y estéticos en el campus universitario de la Universidad Autónoma de Occidente. Este
+                    proceso de finalización y refinamiento en la apariencia y la funcionalidad del campus contribuyó a
+                    crear un entorno universitario más completo y atractivo, que se convirtió en un lugar propicio para
+                    el aprendizaje y el desarrollo académico. </p>
+            </div>
             <video controls>
                 <source src="/Videos/UAO 50 años  90s.mp4" type="video/mp4">
                 Tu navegador no admite la reproducción de video.
             </video>
         </div>
     </div>
+
     <div class="pegman-container" id="pegman-container">
         <img src="/Imagenes/normi_lado.png" alt="Pegman" id="pegman" class="pegman-image">
     </div>
@@ -62,7 +79,7 @@
             // Obtiene el rol seleccionado almacenado en localStorage
             const selectedRol = localStorage.getItem('selectedRol');
             const pegman = document.getElementById('pegman');
-    
+
             // Cambia la imagen de Pegman según el rol seleccionado
             if (selectedRol === 'estudiante') {
                 pegman.src = '/Imagenes/normi_lado.png'; // Ruta de la imagen de estudiante

@@ -183,5 +183,35 @@ h3 {
     width: 100%; /* Establece el ancho al 100% del viewport */
 }
 
+/* Estilos para las instrucciones */
 
+
+.instructions-title {
+    font-size: 2rem; /* Tamaño de fuente para el título de las instrucciones */
+}
+
+.instructions-text {
+    font-size: 1.2rem; /* Tamaño de fuente para el texto de las instrucciones */
+}
+
+.instructions-list {
+    list-style: none;
+    padding-left: 20px;
+    font-size: 1.2rem; /* Tamaño de fuente para los elementos de la lista de instrucciones */
+}
+
+.instructions-item {
+    margin-bottom: 10px;
+}
+
+/* Estilos para los roles */
+.button:nth-child(1) {
+    background-color: #2979ff; /* Cambia el color del botón de Estudiante */
+    color: #ffffff;
+}
+
+.button:nth-child(2) {
+    background-color: #ff6d00; /* Cambia el color del botón de Colaborador */
+    color: #ffffff;
+}
 

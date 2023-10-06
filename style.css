@@ -9,7 +9,12 @@ body {
     height: 100vh;
     background: radial-gradient(circle, #ffffff36, #000000ad);
     background-color: #001938;
+    background-color: #001938;
     /*"#001938", "#331d0f", "#0f2404", "#35111d", "#3d1403"*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Añadido para centrar verticalmente */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,6 +56,12 @@ body {
     /*align-items: center;*/
     justify-content: center; 
 }
+.header-container1 {
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    justify-content: center; 
+}
 
 .titulo {
     display: flex;
@@ -64,6 +75,8 @@ body {
     display: flex;
     gap: 0px;
     padding-bottom: 30px;
+    justify-content: flex-start; /* Alinea el subtítulo hacia la izquierda */
+    padding-left: 95px; /* Agrega un espacio hacia la izquierda */
     justify-content: flex-start; /* Alinea el subtítulo hacia la izquierda */
     padding-left: 95px; /* Agrega un espacio hacia la izquierda */
 }
@@ -220,6 +233,16 @@ h3 {
     right: 10px;
     font-size: 20px;
     cursor: pointer;
+
+}
+.character {
+    /* Otras propiedades de estilo para el personaje */
+  
+    /* Propiedades de transición */
+    transition-property: transform; /* La propiedad que queremos animar es 'transform' */
+    transition-duration: 0.3s; /* Duración de la animación en segundos */
+    transition-timing-function: ease; /* Función de temporización de la animación (suavizado) */
+  }
 
 }
 .character {

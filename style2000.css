@@ -5,7 +5,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 body {
-  background: radial-gradient(circle, #501b2d, #000000);
+  background: radial-gradient(circle, #8D2527, #983B27);
   background-size: 300% 300%;
   animation: waveBackground 20s linear infinite;
 }
@@ -65,7 +65,7 @@ header {
 }
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Dos columnas con tamaños iguales */
+  
   gap: 20px; /* Espacio entre los elementos de la cuadrícula */
   padding: 20px; /* Espacio alrededor de toda la cuadrícula */
 }
@@ -97,7 +97,8 @@ header {
   max-width: 100%; /* Ancho máximo del video para que se ajuste al contenedor */
   display: block; /* Evita problemas de alineación */
   margin: 0 auto; /* Centra el video horizontalmente */
-  margin-top: 40px; /* Espacio entre el título y el video */
+  margin-top: 30px; /* Espacio entre el título y el video */
+  width: 700px;
 }
 
 /* Estilos para el año grande */
@@ -198,13 +199,68 @@ h2 {
   color: #ffffff; /* Color del texto del botón al pasar el cursor (claro) */
 }
 
+.year {
+  text-align: center; /* Centra el contenido horizontalmente */
+  margin-top: 20px; /* Espacio entre los videos y el año */
+}
+
+/* Estilos para la línea de tiempo */
+.time-period {
+  display: flex; /* Utiliza flexbox para alinear los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  font-size: 24px; /* Tamaño de fuente para los años */
+  color: #ffffff; /* Color de texto para los años */
+  background-color: rgba(255, 255, 255, 0.2); /* Color de fondo para la línea de tiempo (transparente con opacidad) */
+  padding: 10px 20px; /* Espaciado interno para la línea de tiempo */
+  border-radius: 10px; /* Bordes redondeados para la línea de tiempo */
+}
+
+/* Estilos para los años dentro de la línea de tiempo */
+.time-period span {
+  margin: 0 10px; /* Espacio entre los años */
+}
+
+/* Estilos para el texto descriptivo */
+.description-text {
+  color: #ffffff; /* Color de texto blanco */
+  font-size: 18px; /* Tamaño de fuente más grande */
+  text-align: justify; /* Texto justificado */
+  padding: 10px; /* Espaciado interno para el texto */
+  padding-top: 40px;
+  padding-left: 130px;
+  padding-right: 130px;
+}
+
+.video-title {
+  font-size: 24px;
+  margin: 0;
+  color: #ffffff;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  transition: background-color 0.3s, color 0.3s;
+  /* Cambia el cursor al pasar el ratón */
+}
+
+/* Animación de resaltado al pasar el cursor */
+.video-title:hover {
+  background-color: #333; /* Cambia el fondo al pasar el cursor (oscuro) */
+  color: #ffffff; /* Cambia el color del texto al pasar el cursor (claro) */
+}
+
 .pegman-container {
-  position: fixed; /* Cambia a posición fija */
-  top: 80%;        /* Alinea el "Pegman" verticalmente en la mitad de la página */
-  left: 5%;       /* Ajusta la distancia desde la parte izquierda según tus necesidades */
-  transform: translate(-50%, -50%); /* Centra verticalmente el "Pegman" */
+  position: absolute;
+  top: 60%;    /* Alinea el "Pegman" verticalmente en la mitad de la página */
+  left: 5%;    /* Ajusta la distancia desde la parte izquierda según tus necesidades */
+  transform: translate(-50%, -50%);    /* Centra verticalmente el "Pegman" */
   z-index: 2;
 }
+
 /* Estilos para la imagen del "pegman" */
 .pegman-image {
   width: 120px;

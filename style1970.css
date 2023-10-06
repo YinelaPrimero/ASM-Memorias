@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background: radial-gradient(circle, #001938, #000000);
+  background: radial-gradient(circle, #131547, #000000);
   background-size: 300% 300%;
   animation: waveBackground 20s linear infinite;
 }

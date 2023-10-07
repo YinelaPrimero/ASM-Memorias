@@ -262,32 +262,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   });
-
-
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'ArrowLeft') {
-      swiper.slidePrev(); // Cambiar a la diapositiva anterior
-    } else if (e.key === 'ArrowRight') {
-      swiper.slideNext(); // Cambiar a la siguiente diapositiva
-    }
-    // Verifica si la tecla "m" se presionó y el Swiper está centrado en una diapositiva
-    if (e.key === 'm') {
-      // Espera a que el Swiper se actualice después del cambio de diapositiva
-      setTimeout(function () {
-        const centeredSlideIndex = swiper.realIndex;
-        const decadeUrls = ['1970.html', '1980.html', '1990.html', '2000.html', '2010.html'];
-
-        if (centeredSlideIndex >= 0 && centeredSlideIndex < decadeUrls.length) {
-          window.location.href = decadeUrls[centeredSlideIndex];
-        }
-      }, 100); // Ajusta este valor si es necesario para dar tiempo al Swiper a actualizarse
-    }
-
-
-  });
-
-
+  
 });
 
 function cambiarImagen(opcion) {
